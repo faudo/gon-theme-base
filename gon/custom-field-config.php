@@ -122,6 +122,7 @@ acf_add_local_field_group(array (
 						'YouTube' => 'YouTube',
 						'Pinterest' => 'Pinterest',
 						'Houzz' => 'Houzz',
+						'BetterBusinessBureau' => 'BetterBusinessBureau',
 					),
 					'default_value' => array (
 					),

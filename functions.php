@@ -150,8 +150,11 @@ function gon_base_theme_nav_wrap() {
 		// loop through the rows of data
 		while ( have_rows('repeatable-social', 'option') ) : the_row();
 		?><li class="social-link">
-        	<a href="<?php the_sub_field('social-link');?>" target="_blank">
-            <i class="fa fa-<?php echo strtolower(get_sub_field('social-select'));?>" aria-hidden="true"></i></a></li>
+            	<a href="<?php the_sub_field('social-link');?>" target="_blank">
+                    <?php if(get_sub_field('social-select')!=='BetterBusinessBureau'){ ?><i class="fa fa-<?php echo strtolower(get_sub_field('social-select'));?>" aria-hidden="true"></i><?php } else { ?>
+                    <?php ?><img src="<?php get_template_directory_uri() ?>/images/bbb.png" width='15' height='15'><?php } ?>
+                </a>
+            </li>
             <?php
 		endwhile;
 	else :
